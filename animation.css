@@ -1,0 +1,190 @@
+/* =====================================
+   FLOATING ANIMATION
+===================================== */
+
+.float-heart,
+.float-star {
+
+    animation:
+        floatAround 7s ease-in-out infinite;
+
+}
+
+
+.float-heart:nth-child(2) {
+
+    animation-delay: 1s;
+
+}
+
+
+.float-heart:nth-child(3) {
+
+    animation-delay: 2s;
+
+}
+
+
+.float-star:nth-child(4) {
+
+    animation-delay: 3s;
+
+}
+
+
+.float-star:nth-child(5) {
+
+    animation-delay: 1.5s;
+
+}
+
+
+@keyframes floatAround {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-30px)
+            rotate(15deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+}
+
+
+/* =====================================
+   HEART PULSE
+===================================== */
+
+.final-heart {
+
+    animation:
+        heartPulse 1.5s infinite;
+
+}
+
+
+@keyframes heartPulse {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.08);
+
+    }
+
+}
+
+
+/* =====================================
+   HERO STICKERS
+===================================== */
+
+.hero-sticker {
+
+    position: absolute;
+
+    font-size: 4rem;
+
+    animation:
+        stickerFloat 4s ease-in-out infinite;
+
+}
+
+
+.sticker-one {
+
+    left: 10%;
+
+    top: 20%;
+
+}
+
+
+.sticker-two {
+
+    right: 10%;
+
+    bottom: 20%;
+
+    animation-delay: 1s;
+
+}
+
+
+@keyframes stickerFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-5deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px)
+            rotate(5deg);
+
+    }
+
+}
+
+
+/* =====================================
+   SCROLL REVEAL
+===================================== */
+
+.timeline-item,
+.memory-card,
+.mini-card,
+.note-container {
+
+    opacity: 0;
+
+    transform:
+        translateY(40px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+
+}
+
+
+.timeline-item.visible,
+.memory-card.visible,
+.mini-card.visible,
+.note-container.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}

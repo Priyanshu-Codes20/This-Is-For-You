@@ -1,0 +1,1077 @@
+/* =====================================
+   GLOBAL VARIABLES
+===================================== */
+
+:root {
+
+    --baby-pink: #ffc1d6;
+    --light-pink: #ffe5ee;
+    --soft-pink: #fff1f6;
+
+    --hot-pink: #ff4f91;
+    --dark-pink: #d93672;
+
+    --white: #ffffff;
+    --cream: #fffafc;
+
+    --black: #272027;
+    --grey: #746a71;
+
+    --yellow: #ffe49b;
+    --purple: #e6d7ff;
+    --blue: #d7edff;
+
+    --shadow:
+        0 12px 0 rgba(217, 54, 114, 0.12);
+
+    --radius-large: 30px;
+    --radius-medium: 20px;
+
+}
+
+
+/* =====================================
+   RESET
+===================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255,255,255,0.8) 2px,
+            transparent 3px
+        ),
+        var(--soft-pink);
+
+    background-size: 30px 30px;
+
+    color: var(--black);
+
+    font-family: "Poppins", sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =====================================
+   TYPOGRAPHY
+===================================== */
+
+h1,
+h2,
+h3 {
+
+    font-family: "Fredoka", sans-serif;
+
+}
+
+
+h1 {
+
+    font-size: clamp(4rem, 18vw, 8rem);
+
+    line-height: 0.85;
+
+    font-weight: 700;
+
+}
+
+
+h1 span,
+h2 span {
+
+    color: var(--hot-pink);
+
+}
+
+
+h2 {
+
+    font-size: clamp(2.5rem, 9vw, 5rem);
+
+    line-height: 1;
+
+}
+
+
+h3 {
+
+    font-size: 1.7rem;
+
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #ffffff 0%,
+            #ffe0eb 35%,
+            #ffc1d6 100%
+        );
+
+}
+
+
+.hero-content {
+
+    max-width: 750px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.small-heading {
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: var(--dark-pink);
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-description {
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    margin: 30px 0;
+
+}
+
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.pop-button {
+
+    border: 3px solid var(--black);
+
+    background: var(--hot-pink);
+
+    color: white;
+
+    padding: 16px 25px;
+
+    border-radius: 999px;
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 0 var(--black);
+
+    transition: 0.15s ease;
+
+}
+
+
+.pop-button span {
+
+    margin-left: 8px;
+
+}
+
+
+.pop-button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.pop-button:active {
+
+    transform: translateY(5px);
+
+    box-shadow:
+        0 2px 0 var(--black);
+
+}
+
+
+/* =====================================
+   SCROLL HINT
+===================================== */
+
+.scroll-hint {
+
+    margin-top: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    font-size: 0.75rem;
+
+    color: var(--grey);
+
+}
+
+
+.arrow {
+
+    font-size: 1.5rem;
+
+}
+
+
+/* =====================================
+   SECTIONS
+===================================== */
+
+.section {
+
+    padding: 100px 20px;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+.section-label {
+
+    color: var(--hot-pink);
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    font-size: 0.75rem;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section h2 {
+
+    max-width: 800px;
+
+}
+
+
+.section-text {
+
+    margin-top: 25px;
+
+    color: var(--grey);
+
+    max-width: 600px;
+
+    line-height: 1.8;
+
+}
+
+
+.cute-divider {
+
+    margin-top: 35px;
+
+    display: flex;
+
+    gap: 15px;
+
+    color: var(--hot-pink);
+
+}
+
+
+/* =====================================
+   TIMELINE
+===================================== */
+
+.timeline {
+
+    position: relative;
+
+    margin-top: 80px;
+
+    padding-left: 25px;
+
+}
+
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 5px;
+
+    border-radius: 10px;
+
+    background: var(--baby-pink);
+
+}
+
+
+.timeline-item {
+
+    position: relative;
+
+    margin-bottom: 70px;
+
+}
+
+
+.timeline-dot {
+
+    position: absolute;
+
+    left: -25px;
+
+    top: 20px;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: var(--hot-pink);
+
+    border: 4px solid var(--soft-pink);
+
+    outline: 3px solid var(--hot-pink);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    z-index: 3;
+
+}
+
+
+/* =====================================
+   MEMORY CARD
+===================================== */
+
+.memory-card {
+
+    background: white;
+
+    border-radius: var(--radius-large);
+
+    padding: 15px;
+
+    border: 3px solid var(--black);
+
+    box-shadow: var(--shadow);
+
+    transform: rotate(-1deg);
+
+    transition: 0.25s ease;
+
+}
+
+
+.memory-card:hover {
+
+    transform:
+        rotate(0deg)
+        translateY(-7px);
+
+}
+
+
+.memory-number {
+
+    position: absolute;
+
+    right: 30px;
+
+    top: 25px;
+
+    background: var(--yellow);
+
+    padding: 8px 12px;
+
+    border-radius: 50%;
+
+    font-family: "Fredoka", sans-serif;
+
+    font-weight: 700;
+
+    transform: rotate(8deg);
+
+}
+
+
+.memory-image {
+
+    aspect-ratio: 16 / 9;
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    grid-template-rows: minmax(0, 1fr);
+
+    gap: 6px;
+
+}
+
+
+.memory-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border: 3px solid var(--white);
+
+    border-radius: 12px;
+
+    outline: 2px solid var(--black);
+
+    box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.18);
+
+}
+
+
+.image-sticker {
+
+    position: absolute;
+
+    bottom: 15px;
+
+    right: 15px;
+
+    background: white;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+
+}
+
+
+.memory-content {
+
+    padding: 25px 15px 15px;
+
+}
+
+
+.memory-date {
+
+    color: var(--hot-pink);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.memory-content h3 {
+
+    margin: 8px 0;
+
+}
+
+
+.memory-content p {
+
+    color: var(--grey);
+
+    line-height: 1.7;
+
+    font-size: 0.9rem;
+
+}
+
+
+.memory-tag {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    background: var(--light-pink);
+
+    color: var(--dark-pink);
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================
+   LOVE NOTE
+===================================== */
+
+.love-note-section {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.note-container {
+
+    max-width: 700px;
+
+    background: #fffdf5;
+
+    border: 3px solid var(--black);
+
+    padding: 50px 30px;
+
+    border-radius: 10px;
+
+    position: relative;
+
+    box-shadow:
+        10px 10px 0 var(--baby-pink);
+
+    transform: rotate(1deg);
+
+    text-align: center;
+
+}
+
+
+.note-pin {
+
+    position: absolute;
+
+    top: -20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+
+
+.note-small {
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+    color: var(--hot-pink);
+
+    font-weight: 700;
+
+}
+
+
+.note-container h2 {
+
+    margin: 20px 0;
+
+}
+
+
+.note-container p {
+
+    line-height: 1.8;
+
+    color: var(--grey);
+
+}
+
+
+.signature {
+
+    margin-top: 30px;
+
+    font-family: "Fredoka", sans-serif;
+
+}
+
+
+/* =====================================
+   MEMORY GRID
+===================================== */
+
+.memory-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 45px;
+
+}
+
+
+.mini-card {
+
+    border: 3px solid var(--black);
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    min-height: 180px;
+
+    box-shadow:
+        5px 6px 0 rgba(0,0,0,0.15);
+
+}
+
+
+.mini-card:nth-child(odd) {
+
+    transform: rotate(-2deg);
+
+}
+
+
+.mini-card:nth-child(even) {
+
+    transform: rotate(2deg);
+
+}
+
+
+.mini-icon {
+
+    font-size: 2rem;
+
+}
+
+
+.mini-card h3 {
+
+    margin-top: 15px;
+
+}
+
+
+.mini-card p {
+
+    font-size: 0.8rem;
+
+    color: var(--grey);
+
+    margin-top: 5px;
+
+}
+
+
+.pink {
+
+    background: var(--light-pink);
+
+}
+
+
+.yellow {
+
+    background: var(--yellow);
+
+}
+
+
+.purple {
+
+    background: var(--purple);
+
+}
+
+
+.blue {
+
+    background: var(--blue);
+
+}
+
+
+/* =====================================
+   FINAL
+===================================== */
+
+.final-section {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.final-decoration {
+
+    color: var(--hot-pink);
+
+    font-size: 2rem;
+
+    margin-bottom: 30px;
+
+}
+
+
+.final-small {
+
+    color: var(--dark-pink);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.final-section h2 {
+
+    margin: 25px 0;
+
+}
+
+
+.final-message {
+
+    max-width: 600px;
+
+    color: var(--grey);
+
+    line-height: 1.8;
+
+}
+
+
+.final-heart {
+
+    margin-top: 45px;
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: var(--hot-pink);
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 3rem;
+
+    box-shadow:
+        0 10px 0 var(--dark-pink);
+
+}
+
+
+.forever-text {
+
+    margin-top: 30px;
+
+    font-family: "Fredoka", sans-serif;
+
+    color: var(--dark-pink);
+
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background: var(--hot-pink);
+
+    color: white;
+
+}
+
+
+footer span {
+
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 0.7rem;
+
+    opacity: 0.8;
+
+}
+
+
+/* =====================================
+   MUSIC BUTTON
+===================================== */
+
+.music-button {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 3px solid var(--black);
+
+    background: white;
+
+    font-size: 1.3rem;
+
+    cursor: pointer;
+
+    z-index: 100;
+
+    box-shadow:
+        4px 5px 0 var(--black);
+
+}
+
+
+/* =====================================
+   FLOATING ELEMENTS
+===================================== */
+
+.floating-elements {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+
+}
+
+
+.float-heart,
+.float-star {
+
+    position: absolute;
+
+    color: rgba(255, 79, 145, 0.35);
+
+    font-size: 20px;
+
+}
+
+
+.float-heart:nth-child(1) {
+
+    left: 10%;
+    top: 20%;
+
+}
+
+
+.float-heart:nth-child(2) {
+
+    left: 80%;
+    top: 15%;
+
+}
+
+
+.float-heart:nth-child(3) {
+
+    left: 20%;
+    top: 70%;
+
+}
+
+
+.float-star:nth-child(4) {
+
+    left: 70%;
+    top: 60%;
+
+}
+
+
+.float-star:nth-child(5) {
+
+    left: 45%;
+    top: 30%;
+
+}
+
+
+.float-heart:nth-child(6) {
+
+    left: 90%;
+    top: 80%;
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .section {
+
+        padding: 80px 18px;
+
+    }
+
+
+    .memory-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .memory-image {
+
+        aspect-ratio: 16 / 9;
+
+    }
+
+
+    .note-container {
+
+        padding: 40px 22px;
+
+    }
+
+
+    .timeline {
+
+        padding-left: 22px;
+
+    }
+
+
+    .timeline-dot {
+
+        left: -22px;
+
+        width: 32px;
+
+        height: 32px;
+
+    }
+
+}
